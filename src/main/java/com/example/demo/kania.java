@@ -12,6 +12,7 @@ public class kania {
 
     @GetMapping("/test")
     public String kania(){
+        System.out.println("taa");
         RestTemplate rest = new RestTemplate();
         ResponseEntity<String> response = rest.exchange(
                 "http://192.168.55.109:8080/kania",
@@ -19,6 +20,6 @@ public class kania {
                 HttpEntity.EMPTY,
                 String.class);
         System.out.println(response.getBody());
-        return "kania";
+        return "kaniadss";
     }
 }
