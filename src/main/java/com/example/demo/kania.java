@@ -16,10 +16,15 @@ public class kania {
         RestTemplate rest = new RestTemplate();
         ResponseEntity<String> response = rest.exchange(
                 "http://192.168.55.109:8080/kania",
-                HttpMethod.POST,
+                HttpMethod.GET,
                 HttpEntity.EMPTY,
                 String.class);
         System.out.println(response.getBody());
         return "kaniadss";
+    }
+
+    @GetMapping("/test2")
+    public String kania2(){
+        return "kania2";
     }
 }
